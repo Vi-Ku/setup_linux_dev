@@ -1,0 +1,74 @@
+[user]
+	name = Xuehai Pan
+	email = XuehaiPan@pku.edu.cn
+
+[core]
+	compression = -1
+	excludesfile = ~/.gitignore_global
+	eol = lf
+	autocrlf = false
+	editor = vim
+	pager = diff-so-fancy | less --tabs=4 -RFX
+
+[diff]
+	tool = vimdiff
+	guitool = gvimdiff
+	algorithm = histogram
+
+[difftool]
+	prompt = false
+
+[interactive]
+	diffFilter = diff-so-fancy --patch
+
+[merge]
+	tool = vimdiff
+	guitool = gvimdiff
+
+[mergetool]
+	prompt = false
+
+[http]
+	postBuffer = 524288000
+
+[init]
+	defaultBranch = main
+
+[pull]
+	ff = only
+
+[fetch]
+	prune = true
+	parallel = 0
+
+[submodule]
+	recurse = true
+	fetchJobs = 0
+
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+
+[alias]
+	list-ignored = "! cd -- \"${GIT_PREFIX:-.}\" && git ls-files -v \"${1:-.}\" | sed -n -e \"s,^[a-z] \\\\(.*\\\\)\\$,${GIT_PREFIX:-./}\\\\1,p\" && git status --ignored --porcelain \"${1:-.}\" 2>/dev/null | sed -n -e \"s/^\\\\(\\\\!\\\\! \\\\)\\\\(.*\\\\)$/\\\\2/p\";"
+	config-push-remote = "! cd -- \"${GIT_PREFIX:-.}\" && GIT_BRANCH=\"${1:-\"$(git branch --show-current)\"}\" && git config branch.\"${GIT_BRANCH}\".remote upstream; git config branch.\"${GIT_BRANCH}\".pushremote origin;"
+
+[color]
+	ui = true
+
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22
+
+[color "diff"]
+	meta = yellow
+	frag = magenta bold
+	func = 146 bold
+	commit = yellow bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse

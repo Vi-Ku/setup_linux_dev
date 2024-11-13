@@ -1,0 +1,45 @@
+auto_activate_base: false
+auto_update_conda: true
+
+channels:
+  - pytorch
+  - defaults
+  - conda-forge
+default_channels:
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/r
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/msys2
+custom_channels:
+  conda-forge: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  pytorch: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  msys2: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  bioconda: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  menpo: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  simpleitk: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+channel_priority: flexible
+
+ssl_verify: true
+show_channel_urls: false
+report_errors: false
+
+force_reinstall: true
+create_default_packages:
+  # - anaconda
+  - pip
+  - ipython
+  - ipdb
+  - jupyter
+  - jupyterlab
+  - jupyter-lsp
+  - jupyterlab-lsp
+  - numpy
+  - matplotlib-base
+  - pandas
+  - rich
+  - tqdm
+  - ruff
+  - black-jupyter
+  - isort
+  - pre-commit
+
+# vim: filetype=yaml tabstop=2 shiftwidth=2 expandtab
