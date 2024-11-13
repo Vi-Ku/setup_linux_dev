@@ -15,7 +15,7 @@ Automation scripts for setting up a basic development environment. ([screenshots
 - [Screenshots](#screenshots)
 
 ## Usage
-
+to be updated later.
 ### Installation
 
 Download the script file using [wget](https://www.gnu.org/software/wget) / [curl](https://curl.haxx.se) / [git](https://git-scm.com)
